@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: ec2-rails-app_production
-  username: ec2-rails-app
-  password: <%= ENV['EC2-RAILS-APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: 
