@@ -14,12 +14,17 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: passwordPASSWORD@999
   host: localhost
 
 development:
   <<: *default
   database: ec2-rails-app_development
+  adapter: mysql2
+  database: mydb
+  Host: localhost
+  username: root
+  password: mypass
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -51,4 +56,4 @@ production:
   <<: *default
   database: ec2-rails-app_production
   username: root
-  password: 
+  password: passwordPASSWORD@999
